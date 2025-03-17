@@ -66,6 +66,17 @@ fn printUsage() void {
     stderr.print("  shell [<command>] Run remote shell command\n", .{}) catch {};
     stderr.print("  push <local> <remote>\n", .{}) catch {};
     stderr.print("                    Copy file/dir to device\n", .{}) catch {};
+    stderr.print("  pull <remote> <local>\n", .{}) catch {};
+    stderr.print("                    Copy file/dir from device\n", .{}) catch {};
+    stderr.print("  install [-r] <apk>\n", .{}) catch {};
+    stderr.print("                    Install APK (-r: replace existing app)\n", .{}) catch {};
+    stderr.print("  uninstall [-k] <package>\n", .{}) catch {};
+    stderr.print("                    Uninstall app (-k: keep data/cache)\n", .{}) catch {};
+    stderr.print("  logcat [options]  View device log\n", .{}) catch {};
+    stderr.print("  connect <host>[:<port>]\n", .{}) catch {};
+    stderr.print("                    Connect to device via TCP/IP\n", .{}) catch {};
+    stderr.print("  disconnect [<host>[:<port>]]\n", .{}) catch {};
+    stderr.print("                    Disconnect from TCP/IP device\n", .{}) catch {};
     stderr.print("  version           Show version\n", .{}) catch {};
     stderr.print("  help              Show this help message\n", .{}) catch {};
 }
